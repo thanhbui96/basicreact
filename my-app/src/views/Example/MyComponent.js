@@ -1,6 +1,7 @@
 
 import React from 'react';
 import ChildComponent from './ChildComponent';
+import AddComponent from './AddComponent';
 class MyComponent extends React.Component {
     // state = {
     //     name: '',
@@ -51,7 +52,7 @@ class MyComponent extends React.Component {
         //let name = "Eric"
         return (
             <>
-
+<AddComponent />
 
                 
                 <div>
@@ -76,7 +77,7 @@ class MyComponent extends React.Component {
                         onClick={(event)=> this.handleSubbmit(event)}
                         />
                     </form>
-                    <ChildComponent name={this.state.firstname} age={'25'} arrJobs={this.state.arrJobs}/>
+                    <ChildComponent  arrJobs={this.state.arrJobs}/>
                 </div>
 
             </>
