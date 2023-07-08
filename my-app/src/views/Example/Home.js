@@ -1,11 +1,17 @@
 import React from "react";
-class Home extends React.Component{
-render(){
-    return(
-        <div>
-            hello dit con me hhhhhhhhhhhhhhhhhhh
-        </div>
-    )
+import { withRouter } from "react-router";
+class Home extends React.Component {
+    componentDidMount() {
+        setTimeout(() => {
+            this.props.history.push('/todo')
+        }, 3000)
+    }
+    render() {
+        return (
+            <div>
+                hello dit con me hhhhhhhhhhhhhhhhhhh
+            </div>
+        )
+    }
 }
-}
-export default Home;
+export default withRouter(Home);
