@@ -74,6 +74,8 @@ class ListTodo extends React.Component {
                     {listTodos && listTodos.length > 0 &&
                         listTodos.map((item, index) => {
                             return (
+                                <>
+                                <p>Vai ca cut dit con me</p>
                                 <div className="todo-child" key={item.id}>
                                     <span>{index + 1}-{item.title}</span>
                                     {isEmptyObj === true ?
@@ -107,6 +109,7 @@ class ListTodo extends React.Component {
                                         onClick={() => this.handleDeleteTodo(item)}
                                     >Delete</button>
                                 </div>
+                                </>
                             )
                         })
                     }
